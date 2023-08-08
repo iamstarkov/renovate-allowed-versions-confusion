@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "config:base",
+    "github>whitesource/merge-confidence:beta"
+  ],
+  "packageRules": [
+    {
+      "labels": ["devdeps"],
+      "matchDatasources": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "allowedVersions": ">=1",
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "developer dependencies (non-major)",
+      "groupSlug": "devdeps"
+    },
+    {
+      "labels": ["proddeps"],
+      "matchDatasources": ["npm"],
+      "allowedVersions": ">=1",
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "production dependencies (non-major)",
+      "groupSlug": "proddeps"
+    },
+    {
+      "labels": ["breaking"],
+      "registryUrls": [
+        "https://nordnet.jfrog.io/artifactory/api/npm/npm-virtual/"
+      ],
+      "matchDatasources": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"]
+    }
+  ]
+}
