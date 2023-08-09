@@ -5,23 +5,26 @@
   ],
   "packageRules": [
     {
+      "groupName": "developer dependencies (non-major)",
+      "groupSlug": "devdeps",
       "labels": ["devdeps"],
+      "matchCurrentVersion": ">=1",
       "matchDatasources": ["npm"],
       "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "developer dependencies (non-major)",
-      "groupSlug": "devdeps"
+      "matchUpdateTypes": ["patch", "minor"]
     },
     {
+      "groupName": "production dependencies (non-major)",
+      "groupSlug": "proddeps",
       "labels": ["proddeps"],
+      "matchCurrentVersion": ">=1",
       "matchDatasources": ["npm"],
       "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "production dependencies (non-major)",
-      "groupSlug": "proddeps"
+      "matchUpdateTypes": ["patch", "minor"]
     },
     {
       "labels": ["breaking"],
+      "matchCurrentVersion": ">=1",
       "matchDatasources": ["npm"],
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["major"]
