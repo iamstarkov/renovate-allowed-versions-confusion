@@ -3,7 +3,7 @@
     "agentkeepalive": "4.0.0",
     "color": "4.0.0",
     "ramda": "0.27.0",
-    "yup": "0.28.0"
+    "yup": "0.32.11"
   },
   "devDependencies": {
     "esbuild": "0.18.10",
