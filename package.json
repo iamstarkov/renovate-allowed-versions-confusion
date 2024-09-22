@@ -6,7 +6,7 @@
     "yup": "0.28.0"
   },
   "devDependencies": {
-    "esbuild": "0.18.10",
+    "esbuild": "0.24.0",
     "esm": "2.0.0",
     "execa": "5.0.0",
     "msw": "0.35.0"
